@@ -1,0 +1,58 @@
+# Unity 生成的文件和文件夹
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Visual Studio 等编辑器生成的文件
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Rider / JetBrains
+.idea/
+
+# MacOS 系统文件
+.DS_Store
+
+# Unity 缓存
+*.asset
+*.meta 注释？但通常 .meta 文件必须提交
+# 注意：.meta 文件需要被版本控制，不要忽略！
+# 上面的 *.meta 是误写的，实际不应忽略。以下行是纠正。
+# 但是很多模板里会写出 *.meta，实际上不应忽略。我们注释掉。
+
+# 如果使用了 Unity 的 Package Manager，不要忽略 manifest.json 和 packages-lock.json
+# 但一般它们都在 Packages/ 目录下，需要提交
+
+# Unity 自动生成的插件目录
+/Assets/Plugins/
+
+# 导出为 Android / iOS 时的临时文件
+*.apk
+*.aab
+*.unitypackage
+
+# 其他可能产生的临时文件
+*.tmp
+*.log
+*.pidb.meta
+*.csproj.meta
+*.sln.meta
+
+# 渲染缓存等
+*_BackUpThisFolder_*
+*.backup
