@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "E:\\UnityProject\\Game_Translate\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|e:\\unityproject\\game_translate\\assets\\scripts\\imageloopscroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\imageloopscroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|e:\\unityproject\\game_translate\\assets\\scripts\\newbehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\newbehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|E:\\UnityProject\\Game_Translate\\assets\\scripts\\gamestart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,30 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ImageLoopScroll.cs",
-              "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\ImageLoopScroll.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ImageLoopScroll.cs",
-              "ToolTip": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\ImageLoopScroll.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ImageLoopScroll.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T03:44:23.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "NewBehaviourScript.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\NewBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NewBehaviourScript.cs",
               "ToolTip": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\NewBehaviourScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\NewBehaviourScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T03:43:36.805Z"
+              "WhenOpened": "2026-04-04T03:43:36.805Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "GameStart.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\GameStart.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameStart.cs",
