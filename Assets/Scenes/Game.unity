@@ -812,6 +812,7 @@ RectTransform:
   - {fileID: 261713322}
   - {fileID: 1213971630}
   - {fileID: 1646167432}
+  - {fileID: 1270309201}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2026,6 +2027,7 @@ GameObject:
   - component: {fileID: 1213971633}
   - component: {fileID: 1213971632}
   - component: {fileID: 1213971631}
+  - component: {fileID: 1213971634}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -2095,7 +2097,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1213971632}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1213971634}
+        m_TargetAssemblyTypeName: FightStart, Assembly-CSharp
+        m_MethodName: StartFight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1213971632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2134,6 +2148,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213971629}
   m_CullTransparentMesh: 1
+--- !u!114 &1213971634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213971629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db354b60c8e4a5c4a8910912f5b980a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1223016894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,12 +2417,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270309198}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 337165246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1318675942
 GameObject:
@@ -3646,5 +3672,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1318675945}
   - {fileID: 337165246}
-  - {fileID: 1270309201}
   - {fileID: 934453654}

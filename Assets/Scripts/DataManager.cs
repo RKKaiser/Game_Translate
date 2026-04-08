@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
+    public static DataManager Instance;
     public int gameT;   //游戏游玩次数
     public int topUpT;  //充值次数
 
