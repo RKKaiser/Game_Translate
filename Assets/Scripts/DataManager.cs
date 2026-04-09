@@ -8,6 +8,15 @@ public class DataManager : MonoBehaviour
     public int gameT;   //游戏游玩次数
     public int topUpT;  //充值次数
 
+    public int VIPRank;
+
+    public int rank;
+
+    public int pet;
+
+    public int inscription;
+
+
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
