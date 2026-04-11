@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\UnityProject\\Game_Translate\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|E:\\UnityProject\\Game_Translate\\assets\\scripts\\lockpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lockpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|e:\\unityproject\\game_translate\\assets\\scripts\\settingpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\settingpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -71,19 +75,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "LockPanel.cs",
+              "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\LockPanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LockPanel.cs",
+              "ToolTip": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\LockPanel.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LockPanel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T06:40:09.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "SettingPanel.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\SettingPanel.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SettingPanel.cs",
               "ToolTip": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\SettingPanel.cs",
               "RelativeToolTip": "Assets\\Scripts\\SettingPanel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-11T06:17:14.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "OpenSetting.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\OpenSetting.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\OpenSetting.cs",
@@ -94,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UIZoomToRight.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\UIZoomToRight.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Game\\UIZoomToRight.cs",
@@ -106,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "NewBehaviourScript.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\NewBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Game\\NewBehaviourScript.cs",
@@ -117,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ImageScaleCenter_AutoHide.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\ImageScaleCenter_AutoHide.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ImageScaleCenter_AutoHide.cs",
@@ -129,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UIController_GroupImage.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\UIController_GroupImage.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIController_GroupImage.cs",
@@ -141,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UIController.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\UIController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIController.cs",
@@ -152,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "NewBehaviourScript.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\NewBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NewBehaviourScript.cs",
@@ -163,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ImageScaleByCenter.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\ImageScaleByCenter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ImageScaleByCenter.cs",
@@ -174,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ImageLoopScroll.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\ImageLoopScroll.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ImageLoopScroll.cs",
@@ -186,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "GameStart.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\GameStart.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameStart.cs",

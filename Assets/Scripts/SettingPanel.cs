@@ -7,9 +7,14 @@ using UnityEngine;
 public class SettingPanel : MonoBehaviour
 {
     public GameObject settingPanel;
+    public GameObject LockPanel;
     public void OpenSettingPanel()
     {
         settingPanel.SetActive(true);
+    }
+    public void OpenLockPanel()
+    {
+        LockPanel.SetActive(true);
     }
     public void CloseSettingPanel()
     {
