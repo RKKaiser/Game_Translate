@@ -10,6 +10,10 @@ public class PurchaseTanChuang : MonoBehaviour
     public GameObject MainPage_tanChuang;
     public GameObject Diamond_tanChuang;
     public GameObject Greeting_tanChuang;
+    public GameObject Trash1_tanChuang;
+    public GameObject Trash2_tanChuang;
+    public GameObject Trash3_tanChuang;
+    public GameObject Trash4_tanChuang;
 
     private DataManager _dataManager;
 
@@ -68,6 +72,26 @@ public class PurchaseTanChuang : MonoBehaviour
         CloseAllTanChuang();
         Greeting_tanChuang.SetActive(true);
     }
+    public void OpenTrash1TanChuang()
+    {
+        CloseAllTanChuang();
+        Trash1_tanChuang.SetActive(true);
+    }
+    public void OpenTrash2TanChuang()
+    {
+        CloseAllTanChuang();
+        Trash2_tanChuang.SetActive(true);
+    }
+    public void OpenTrash3TanChuang()
+    {
+        CloseAllTanChuang();
+        Trash3_tanChuang.SetActive(true);
+    }
+    public void OpenTrash4TanChuang()
+    {
+        CloseAllTanChuang();
+        Trash4_tanChuang.SetActive(true);
+    }
 
     // ===================================================================================
     // ¹Ø±Õ¸÷¸öµ¯´°
@@ -80,6 +104,11 @@ public class PurchaseTanChuang : MonoBehaviour
     public void CloseMainPageTanChuang() => MainPage_tanChuang.SetActive(false);
     public void CloseDiamondTanChuang() => Diamond_tanChuang.SetActive(false);
     public void CloseGreetingTanChuang() => Greeting_tanChuang.SetActive(false);
+    public void CloseTrash1TanChuang() => Trash1_tanChuang.SetActive(false);
+    public void CloseTrash2TanChuang() => Trash2_tanChuang.SetActive(false);
+    public void CloseTrash3TanChuang() => Trash3_tanChuang.SetActive(false);
+    public void CloseTrash4TanChuang() => Trash4_tanChuang.SetActive(false);
+
     public void CloseAllTanChuang()
     {
         Level_tanChuang.SetActive(false);
@@ -90,6 +119,10 @@ public class PurchaseTanChuang : MonoBehaviour
         MainPage_tanChuang.SetActive(false);
         Diamond_tanChuang.SetActive(false);
         Greeting_tanChuang.SetActive(false);
+        Trash1_tanChuang.SetActive(false);
+        Trash2_tanChuang.SetActive(false);
+        Trash3_tanChuang.SetActive(false);
+        Trash4_tanChuang.SetActive(false);
     }
 
     // ===================================================================================
