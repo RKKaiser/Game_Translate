@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "E:\\UnityProject\\Game_Translate\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|e:\\unityproject\\game_translate\\assets\\scripts\\game\\newbehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\game\\newbehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|e:\\unityproject\\game_translate\\assets\\scripts\\game\\uizoomtoright.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\game\\uizoomtoright.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|e:\\unityproject\\game_translate\\assets\\scripts\\imagescalecenter_autohide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Game\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|E:\\UnityProject\\Game_Translate\\assets\\scripts\\imagescalecenter_autohide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\imagescalecenter_autohide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -59,19 +63,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NewBehaviourScript.cs",
-              "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\NewBehaviourScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Game\\NewBehaviourScript.cs",
-              "ToolTip": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\NewBehaviourScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Game\\NewBehaviourScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Title": "UIZoomToRight.cs",
+              "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\UIZoomToRight.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Game\\UIZoomToRight.cs",
+              "ToolTip": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\UIZoomToRight.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Game\\UIZoomToRight.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T01:31:44.358Z",
+              "WhenOpened": "2026-04-11T04:39:13.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "NewBehaviourScript.cs",
+              "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\NewBehaviourScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Game\\NewBehaviourScript.cs",
+              "ToolTip": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\NewBehaviourScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Game\\NewBehaviourScript.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T01:31:44.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ImageScaleCenter_AutoHide.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\ImageScaleCenter_AutoHide.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ImageScaleCenter_AutoHide.cs",
@@ -79,12 +94,11 @@
               "RelativeToolTip": "Assets\\Scripts\\ImageScaleCenter_AutoHide.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAALsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T11:49:58.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-05T11:49:58.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "UIController_GroupImage.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\UIController_GroupImage.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIController_GroupImage.cs",
@@ -96,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UIController.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\UIController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIController.cs",
@@ -107,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "NewBehaviourScript.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\NewBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NewBehaviourScript.cs",
@@ -118,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ImageScaleByCenter.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\ImageScaleByCenter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ImageScaleByCenter.cs",
@@ -129,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ImageLoopScroll.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\ImageLoopScroll.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ImageLoopScroll.cs",
@@ -141,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "GameStart.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\GameStart.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameStart.cs",
