@@ -47,7 +47,7 @@ public class UIManager : MonoBehaviour
         {
             Debug.LogError($"UIManager on {name} is missing DataManager reference!", this);
             enabled = false; // 停用脚本
-            return;
+            return; 
         }
 
         // 初始显示
