@@ -265,7 +265,6 @@ GameObject:
   - component: {fileID: 59986761}
   - component: {fileID: 59986763}
   - component: {fileID: 59986762}
-  - component: {fileID: 59986764}
   m_Layer: 5
   m_Name: VIP_Level
   m_TagString: Untagged
@@ -330,29 +329,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59986760}
   m_CullTransparentMesh: 1
---- !u!114 &59986764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59986760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0f9a9088f3802f4c9794048dc72e5c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dataManager: {fileID: 1510052510}
-  targetVariableName: VIPRank
-  sprites:
-  - {fileID: 21300000, guid: dfd743bc96f6e4d449afab797e3d2951, type: 3}
-  - {fileID: 21300000, guid: 04a35213e58f3bb4ba6ac8de9f38121c, type: 3}
-  - {fileID: 21300000, guid: 07054150710172a4195ca68c9aa75c98, type: 3}
-  - {fileID: 21300000, guid: 782a724f1f12a9a478e866a96f288644, type: 3}
-  - {fileID: 21300000, guid: 3b150123942f3f5429c3a80e8cf55077, type: 3}
-  - {fileID: 21300000, guid: bbda6bd3b95455945b397d9b3c04af5b, type: 3}
-  - {fileID: 21300000, guid: 417915f810b00834f9848cc7c5660758, type: 3}
-  defaultSprite: {fileID: 21300000, guid: dfd743bc96f6e4d449afab797e3d2951, type: 3}
 --- !u!1 &64248063
 GameObject:
   m_ObjectHideFlags: 0
@@ -6009,10 +5985,42 @@ MonoBehaviour:
     newSprite: {fileID: 21300000, guid: 34053d6b1c4d42a429be7f76c7e5b24a, type: 3}
   - targetObject: {fileID: 628234893}
     newSprite: {fileID: 21300000, guid: 34053d6b1c4d42a429be7f76c7e5b24a, type: 3}
+  rankAssets:
+  - rankValue: 0
+    displaySprite: {fileID: 21300000, guid: 0e83dcf0020bd1e479b071bcc0ece1af, type: 3}
+  - rankValue: 1
+    displaySprite: {fileID: 21300000, guid: 882d0b874a935964c8de08969827490b, type: 3}
+  - rankValue: 2
+    displaySprite: {fileID: 21300000, guid: 00f7e45a380d8d848ba61d6bc299121a, type: 3}
+  - rankValue: 3
+    displaySprite: {fileID: 21300000, guid: 1b0481c0d19856e40ba49148f017bdd3, type: 3}
+  - rankValue: 4
+    displaySprite: {fileID: 21300000, guid: d9468b076df191c4c90356a4b135aacc, type: 3}
+  - rankValue: 5
+    displaySprite: {fileID: 21300000, guid: ed19ab33100eec24792e7b6b228c5f6c, type: 3}
+  - rankValue: 6
+    displaySprite: {fileID: 21300000, guid: d01f506b152085845b03c30780aba23c, type: 3}
+  vipAssets:
+  - vipLevel: 0
+    displaySprite: {fileID: 21300000, guid: dfd743bc96f6e4d449afab797e3d2951, type: 3}
+  - vipLevel: 1
+    displaySprite: {fileID: 21300000, guid: 04a35213e58f3bb4ba6ac8de9f38121c, type: 3}
+  - vipLevel: 2
+    displaySprite: {fileID: 21300000, guid: 07054150710172a4195ca68c9aa75c98, type: 3}
+  - vipLevel: 3
+    displaySprite: {fileID: 21300000, guid: 782a724f1f12a9a478e866a96f288644, type: 3}
+  - vipLevel: 4
+    displaySprite: {fileID: 21300000, guid: 3b150123942f3f5429c3a80e8cf55077, type: 3}
+  - vipLevel: 5
+    displaySprite: {fileID: 21300000, guid: bbda6bd3b95455945b397d9b3c04af5b, type: 3}
+  - vipLevel: 6
+    displaySprite: {fileID: 21300000, guid: 417915f810b00834f9848cc7c5660758, type: 3}
   mingwenParent: {fileID: 1972655898}
   diamondParent: {fileID: 843410933}
   petObject: {fileID: 1800334293}
   refreshIntervalFrames: 10
+  rankTarget: {fileID: 1663037117}
+  vipTarget: {fileID: 59986760}
 --- !u!1 &1125103780
 GameObject:
   m_ObjectHideFlags: 0
@@ -8735,7 +8743,6 @@ GameObject:
   - component: {fileID: 1663037118}
   - component: {fileID: 1663037120}
   - component: {fileID: 1663037119}
-  - component: {fileID: 1663037121}
   m_Layer: 5
   m_Name: Rank_Level
   m_TagString: Untagged
@@ -8800,30 +8807,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663037117}
   m_CullTransparentMesh: 1
---- !u!114 &1663037121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663037117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0f9a9088f3802f4c9794048dc72e5c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dataManager: {fileID: 1510052510}
-  targetVariableName: rank
-  sprites:
-  - {fileID: 21300000, guid: 0e83dcf0020bd1e479b071bcc0ece1af, type: 3}
-  - {fileID: 21300000, guid: 8a1e19a3e9b97074bb23306410505990, type: 3}
-  - {fileID: 21300000, guid: 882d0b874a935964c8de08969827490b, type: 3}
-  - {fileID: 21300000, guid: 00f7e45a380d8d848ba61d6bc299121a, type: 3}
-  - {fileID: 21300000, guid: 1b0481c0d19856e40ba49148f017bdd3, type: 3}
-  - {fileID: 21300000, guid: d9468b076df191c4c90356a4b135aacc, type: 3}
-  - {fileID: 21300000, guid: ed19ab33100eec24792e7b6b228c5f6c, type: 3}
-  - {fileID: 21300000, guid: d01f506b152085845b03c30780aba23c, type: 3}
-  defaultSprite: {fileID: 21300000, guid: 0e83dcf0020bd1e479b071bcc0ece1af, type: 3}
 --- !u!1 &1677982920
 GameObject:
   m_ObjectHideFlags: 0
