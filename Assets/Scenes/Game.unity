@@ -10417,8 +10417,8 @@ MonoBehaviour:
   paySFX: {fileID: 8300000, guid: 654003ad1c6c961418be0012111d52bd, type: 3}
   popupSFX: {fileID: 8300000, guid: 0641ebf87ecf8fb43b781496f598b5e1, type: 3}
   buttonClickSFX: {fileID: 8300000, guid: 7e1596820a576e74f80241bd19272ae8, type: 3}
-  bgmVolume: 0.35
-  sfxVolume: 0.7
+  bgmVolume: 0.2
+  sfxVolume: 0.5
 --- !u!4 &1992307712
 Transform:
   m_ObjectHideFlags: 0

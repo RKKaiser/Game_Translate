@@ -130,6 +130,7 @@ public class PurchaseTanChuang : MonoBehaviour
     // ===================================================================================
     public void Buy_Level()
     {
+        SoundManager.Instance.PlayPaySound();
         _dataManager.gameT =0;
         _dataManager.OnPlayerTopUp();
         CloseLevelTanChuang();
@@ -137,6 +138,7 @@ public class PurchaseTanChuang : MonoBehaviour
 
     public void Buy_Skin()
     {
+        SoundManager.Instance.PlayPaySound();
         _dataManager.gameT =0;
         _dataManager.OnPlayerTopUp();
         CloseSkinTanChuang();
@@ -144,6 +146,7 @@ public class PurchaseTanChuang : MonoBehaviour
 
     public void Buy_Pet()
     {
+        SoundManager.Instance.PlayPaySound();
         _dataManager.gameT =0;
         _dataManager.OnPlayerTopUp();
         ClosePetTanChuang();
@@ -151,6 +154,7 @@ public class PurchaseTanChuang : MonoBehaviour
 
     public void Buy_Title()
     {
+        SoundManager.Instance.PlayPaySound();
         _dataManager.gameT =0;
         _dataManager.OnPlayerTopUp();
         CloseTitleTanChuang();
@@ -158,6 +162,7 @@ public class PurchaseTanChuang : MonoBehaviour
 
     public void Buy_Mingwen()
     {
+        SoundManager.Instance.PlayPaySound();
         _dataManager.gameT =0;
         _dataManager.OnPlayerTopUp();
         CloseMingwenTanChuang();
@@ -165,6 +170,7 @@ public class PurchaseTanChuang : MonoBehaviour
 
     public void Buy_MainPage()
     {
+        SoundManager.Instance.PlayPaySound();
         _dataManager.gameT =0;
        _dataManager.OnPlayerTopUp();
         CloseMainPageTanChuang();
@@ -172,12 +178,14 @@ public class PurchaseTanChuang : MonoBehaviour
 
     public void Buy_Diamond()
     {
+        SoundManager.Instance.PlayPaySound();
         _dataManager.gameT =0;
         _dataManager.OnPlayerTopUp();
         CloseDiamondTanChuang();
     }
     public void Buy_Greeting()
     {
+        SoundManager.Instance.PlayPaySound();
         //��Ϸ�����߼�����
         CloseDiamondTanChuang();
     }

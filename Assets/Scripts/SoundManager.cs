@@ -1,8 +1,10 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement; // 必须引用场景管理命名空间
 
 /// <summary>
 /// 声音管理器：控制游戏内的背景音乐(BGM)与各类音效(SFX)
+/// 特性：场景切换时自动停止失败音效
 /// </summary>
 public class SoundManager : MonoBehaviour
 {
@@ -11,14 +13,15 @@ public class SoundManager : MonoBehaviour
 
     private DataManager _dataManager;
 
-    // 音频源组件
-    private AudioSource _bgmSource; // 专门用于播放 BGM
-    private AudioSource _sfxSource; // 专门用于播放音效
+    // --- 音频源组件 (分离管理) ---
+    private AudioSource _bgmSource;      // BGM 专用
+    private AudioSource _sfxSource;      // 普通音效专用 (点击、弹窗、氪金)
+    private AudioSource _loseSource;     // 失败音效专用 (用于单独控制停止)
 
     [Header("1. 音频剪辑配置")]
     // BGM 配置
     public AudioClip defaultBGM;       // 默认背景音乐
-    public AudioClip vipBGM;           // 充值解锁后的背景音乐 (topUpT >= 1 时播放)
+    public AudioClip vipBGM;           // 充值解锁后的背景音乐
 
     // 音效配置
     public AudioClip winSFX;           // 胜利音效
@@ -28,8 +31,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip buttonClickSFX;   // 按钮点击音效
 
     [Header("2. 参数调节")]
-    public float bgmVolume = 0.5f;     // BGM 音量
-    public float sfxVolume = 1.0f;     // 音效音量
+    public float bgmVolume = 0.5f;
+    public float sfxVolume = 1.0f;
 
     private void Awake()
     {
@@ -37,7 +40,7 @@ public class SoundManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // 通常声音管理器需要跨场景存在
+            DontDestroyOnLoad(gameObject); // 确保切换场景时声音管理器不销毁
         }
         else
         {
@@ -49,6 +52,15 @@ public class SoundManager : MonoBehaviour
         
         // 初始化音频源
         InitializeAudioSources();
+
+        // 注册场景加载事件
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        // 移除事件监听，防止内存泄漏
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     /// <summary>
@@ -56,17 +68,35 @@ public class SoundManager : MonoBehaviour
     /// </summary>
     private void InitializeAudioSources()
     {
-        // 初始化 BGM Source
+        // 1. BGM Source
         _bgmSource = gameObject.AddComponent<AudioSource>();
-        _bgmSource.loop = true; // BGM 通常循环播放
+        _bgmSource.loop = true;
         _bgmSource.playOnAwake = false;
         _bgmSource.volume = bgmVolume;
 
-        // 初始化 SFX Source
+        // 2. 普通音效 Source
         _sfxSource = gameObject.AddComponent<AudioSource>();
-        _sfxSource.loop = false; // 音效通常不循环
+        _sfxSource.loop = false;
         _sfxSource.playOnAwake = false;
         _sfxSource.volume = sfxVolume;
+
+        // 3. 失败音效 Source (独立出来，方便单独停止)
+        _loseSource = gameObject.AddComponent<AudioSource>();
+        _loseSource.loop = false;
+        _loseSource.playOnAwake = false;
+        _loseSource.volume = sfxVolume;
+    }
+
+    /// <summary>
+    /// 场景加载完成后的回调
+    /// </summary>
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // 核心逻辑：每次切换场景，强制停止失败音效
+        if (_loseSource != null && _loseSource.isPlaying)
+        {
+            _loseSource.Stop();
+        }
     }
 
     private void Start()
@@ -80,7 +110,6 @@ public class SoundManager : MonoBehaviour
         if (_dataManager == null) return;
 
         // 检查充值状态以切换 BGM
-        // 逻辑：如果 topUpT >= 1 且当前 BGM 不是 VIP BGM，则切换
         if (_dataManager.topUpT >= 1)
         {
             if (vipBGM != null && _bgmSource.clip != vipBGM)
@@ -90,7 +119,6 @@ public class SoundManager : MonoBehaviour
         }
         else
         {
-            // 如果 topUpT < 1 且当前不是默认 BGM，则切回默认
             if (defaultBGM != null && _bgmSource.clip != defaultBGM)
             {
                 PlayDefaultBGM();
@@ -99,34 +127,23 @@ public class SoundManager : MonoBehaviour
     }
 
     // =================================================================================
-    // 公共播放方法 (供其他脚本调用)
+    // 公共播放方法
     // =================================================================================
 
-    /// <summary>
-    /// 播放默认背景音乐
-    /// </summary>
     public void PlayDefaultBGM()
     {
         if (defaultBGM == null) return;
-        
         _bgmSource.clip = defaultBGM;
         _bgmSource.Play();
     }
 
-    /// <summary>
-    /// 播放充值后的背景音乐
-    /// </summary>
     public void PlayVipBGM()
     {
         if (vipBGM == null) return;
-        
         _bgmSource.clip = vipBGM;
         _bgmSource.Play();
     }
 
-    /// <summary>
-    /// 播放胜利音效
-    /// </summary>
     public void PlayWinSound()
     {
         if (winSFX != null) _sfxSource.PlayOneShot(winSFX);
@@ -134,31 +151,29 @@ public class SoundManager : MonoBehaviour
 
     /// <summary>
     /// 播放失败音效
+    /// 注意：此音效会在场景切换时自动停止
     /// </summary>
     public void PlayLoseSound()
     {
-        if (loseSFX != null) _sfxSource.PlayOneShot(loseSFX);
+        if (loseSFX != null)
+        {
+            // 如果已经在播放，先停止再播放（可选，防止重叠）
+            if (_loseSource.isPlaying) _loseSource.Stop();
+            
+            _loseSource.PlayOneShot(loseSFX);
+        }
     }
 
-    /// <summary>
-    /// 播放氪金/充值音效
-    /// </summary>
     public void PlayPaySound()
     {
         if (paySFX != null) _sfxSource.PlayOneShot(paySFX);
     }
 
-    /// <summary>
-    /// 播放弹窗音效
-    /// </summary>
     public void PlayPopupSound()
     {
         if (popupSFX != null) _sfxSource.PlayOneShot(popupSFX);
     }
 
-    /// <summary>
-    /// 播放按钮点击音效
-    /// </summary>
     public void PlayButtonClickSound()
     {
         if (buttonClickSFX != null) _sfxSource.PlayOneShot(buttonClickSFX);
