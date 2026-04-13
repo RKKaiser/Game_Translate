@@ -50,7 +50,7 @@ public class FightButton : MonoBehaviour
         if (dataManager.gameT == 1 && dataManager.topUpT == 0) return true;
         if (dataManager.gameT >= 2 && dataManager.topUpT == 0) return false;
         if (dataManager.gameT == 1 && dataManager.topUpT == 1) return true;
-        if (dataManager.gameT >= 2 && dataManager.topUpT == 1) return true; // 特殊保留
+        if (dataManager.gameT >= 2 && dataManager.topUpT == 1) return false; // 特殊保留
         
         // 新增档位 2-5
         if (dataManager.topUpT >= 2 && dataManager.topUpT <= 5) 
