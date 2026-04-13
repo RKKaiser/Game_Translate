@@ -1461,6 +1461,70 @@ MonoBehaviour:
     newSprite: {fileID: 21300000, guid: 34053d6b1c4d42a429be7f76c7e5b24a, type: 3}
   - targetObject: {fileID: 885891692}
     newSprite: {fileID: 21300000, guid: 34053d6b1c4d42a429be7f76c7e5b24a, type: 3}
+  playerRankAssets:
+  - rankValue: 0
+    displaySprite: {fileID: 21300000, guid: 0e83dcf0020bd1e479b071bcc0ece1af, type: 3}
+  - rankValue: 1
+    displaySprite: {fileID: 21300000, guid: 882d0b874a935964c8de08969827490b, type: 3}
+  - rankValue: 2
+    displaySprite: {fileID: 21300000, guid: 00f7e45a380d8d848ba61d6bc299121a, type: 3}
+  - rankValue: 3
+    displaySprite: {fileID: 21300000, guid: 1b0481c0d19856e40ba49148f017bdd3, type: 3}
+  - rankValue: 4
+    displaySprite: {fileID: 21300000, guid: d9468b076df191c4c90356a4b135aacc, type: 3}
+  - rankValue: 5
+    displaySprite: {fileID: 21300000, guid: ed19ab33100eec24792e7b6b228c5f6c, type: 3}
+  - rankValue: 6
+    displaySprite: {fileID: 21300000, guid: d01f506b152085845b03c30780aba23c, type: 3}
+  enemyRankAssets:
+  - rankValue: 0
+    displaySprite: {fileID: 21300000, guid: 0e83dcf0020bd1e479b071bcc0ece1af, type: 3}
+  - rankValue: 1
+    displaySprite: {fileID: 21300000, guid: 882d0b874a935964c8de08969827490b, type: 3}
+  - rankValue: 2
+    displaySprite: {fileID: 21300000, guid: 00f7e45a380d8d848ba61d6bc299121a, type: 3}
+  - rankValue: 3
+    displaySprite: {fileID: 21300000, guid: 1b0481c0d19856e40ba49148f017bdd3, type: 3}
+  - rankValue: 4
+    displaySprite: {fileID: 21300000, guid: d9468b076df191c4c90356a4b135aacc, type: 3}
+  - rankValue: 5
+    displaySprite: {fileID: 21300000, guid: ed19ab33100eec24792e7b6b228c5f6c, type: 3}
+  - rankValue: 6
+    displaySprite: {fileID: 21300000, guid: d01f506b152085845b03c30780aba23c, type: 3}
+  playerVIPAssets:
+  - vipLevel: 0
+    displaySprite: {fileID: 21300000, guid: dfd743bc96f6e4d449afab797e3d2951, type: 3}
+  - vipLevel: 1
+    displaySprite: {fileID: 21300000, guid: 04a35213e58f3bb4ba6ac8de9f38121c, type: 3}
+  - vipLevel: 2
+    displaySprite: {fileID: 21300000, guid: 07054150710172a4195ca68c9aa75c98, type: 3}
+  - vipLevel: 3
+    displaySprite: {fileID: 21300000, guid: 782a724f1f12a9a478e866a96f288644, type: 3}
+  - vipLevel: 4
+    displaySprite: {fileID: 21300000, guid: 3b150123942f3f5429c3a80e8cf55077, type: 3}
+  - vipLevel: 5
+    displaySprite: {fileID: 21300000, guid: bbda6bd3b95455945b397d9b3c04af5b, type: 3}
+  - vipLevel: 6
+    displaySprite: {fileID: 21300000, guid: 417915f810b00834f9848cc7c5660758, type: 3}
+  enemyVIPAssets:
+  - vipLevel: 0
+    displaySprite: {fileID: 21300000, guid: dfd743bc96f6e4d449afab797e3d2951, type: 3}
+  - vipLevel: 1
+    displaySprite: {fileID: 21300000, guid: 04a35213e58f3bb4ba6ac8de9f38121c, type: 3}
+  - vipLevel: 2
+    displaySprite: {fileID: 21300000, guid: 07054150710172a4195ca68c9aa75c98, type: 3}
+  - vipLevel: 3
+    displaySprite: {fileID: 21300000, guid: 782a724f1f12a9a478e866a96f288644, type: 3}
+  - vipLevel: 4
+    displaySprite: {fileID: 21300000, guid: 3b150123942f3f5429c3a80e8cf55077, type: 3}
+  - vipLevel: 5
+    displaySprite: {fileID: 21300000, guid: bbda6bd3b95455945b397d9b3c04af5b, type: 3}
+  - vipLevel: 6
+    displaySprite: {fileID: 21300000, guid: 417915f810b00834f9848cc7c5660758, type: 3}
+  playerRankTarget: {fileID: 1975472831}
+  playerVIPTarget: {fileID: 1071298780}
+  enemyRankTarget: {fileID: 1172358615}
+  enemyVIPTarget: {fileID: 1817405626}
   refreshIntervalFrames: 10
 --- !u!4 &980278239
 Transform:
