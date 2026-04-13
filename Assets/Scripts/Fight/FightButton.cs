@@ -102,6 +102,7 @@ public class FightButton : MonoBehaviour
 
         if (isWin)
         {
+            SoundManager.Instance.PlayWinSound();
             if (winPanel != null)
             {
                 winPanel.SetActive(true);
@@ -110,6 +111,7 @@ public class FightButton : MonoBehaviour
         }
         else
         {
+            SoundManager.Instance.PlayLoseSound();
             if (losePanel != null)
             {
                 losePanel.SetActive(true);
