@@ -4275,6 +4275,7 @@ MonoBehaviour:
   targetImage: {fileID: 313377113}
   mySpriteGroup:
   - {fileID: 21300000, guid: 204322140a00d5f41963ff4b50b4ad11, type: 3}
+  - {fileID: 21300000, guid: de37eb13cb73af84f851229c41eb5ec5, type: 3}
   singleDelay: 2
   isLoop: 0
   startDelay: 0
@@ -5378,6 +5379,7 @@ MonoBehaviour:
   targetImage: {fileID: 313377113}
   mySpriteGroup:
   - {fileID: 21300000, guid: ccf39f891b21b1141ac697c3e7f20a34, type: 3}
+  - {fileID: 21300000, guid: 2770538387edf0a418fe697c52efc0b1, type: 3}
   singleDelay: 2
   isLoop: 0
   startDelay: 0
@@ -8277,6 +8279,7 @@ MonoBehaviour:
   targetImage: {fileID: 313377113}
   mySpriteGroup:
   - {fileID: 21300000, guid: 7510227b3b6d6a74fa6bb62933f73a69, type: 3}
+  - {fileID: 21300000, guid: a4c72e4c99caa48438d91b285faafb27, type: 3}
   singleDelay: 2
   isLoop: 0
   startDelay: 0
