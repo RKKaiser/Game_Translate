@@ -2,13 +2,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// 自动弹窗触发器
-/// 挂载在Game场景的任意GameObject上，用于在从Fight场景返回时根据条件自动弹出购买窗口
+/// 自动弹窗与界面切换触发器
+/// 挂载在Game场景的任意GameObject上
 /// </summary>
 public class AutoPopupTrigger : MonoBehaviour
 {
-    private PurchaseTanChuang _purchaseManager;
+    private PurchaseTanChuang _purchaseManager; // 购买窗口管理器引用
     private bool _hasTriggered = false; // 防止同一轮循环多次触发
+
+    [Header("手机界面配置")]
+    public float phoneDelay = 1f; // 手机界面弹出前的延时（秒）
+
+    [Header("场景跳转配置")]
+    public float endSceneDelay = 3f; // Greeting弹窗后跳转至End场景的延时（秒）
+
+    [Header("UI管理器引用")]
+    public UIZoomToRight uiZoomManager; // 拖入挂载了 UIZoomToRight 的 GameObject
 
     private void Awake()
     {
@@ -17,6 +26,12 @@ public class AutoPopupTrigger : MonoBehaviour
         if (_purchaseManager == null)
         {
             Debug.LogError("场景中未找到 PurchaseTanChuang 脚本实例！");
+        }
+
+        // 如果 Inspector 没有拖入，则尝试自动查找
+        if (uiZoomManager == null)
+        {
+            uiZoomManager = FindObjectOfType<UIZoomToRight>();
         }
     }
 
@@ -41,57 +56,126 @@ public class AutoPopupTrigger : MonoBehaviour
     {
         // 重置触发状态，准备下一次触发
         _hasTriggered = false;
-        
-        // 如果加载的是Game场景（请确保场景名匹配），且尚未触发过
-        if (scene.name == "Game" && !_hasTriggered)
+
+        // 如果加载的是Game场景（请确保场景名匹配）
+        if (scene.name == "Game")
         {
-            Open();
+            var dataManager = DataManager.Instance;
+
+            // 检查是否需要触发弹窗逻辑
+            if (dataManager != null && !_hasTriggered)
+            {
+                Open();
+            }
         }
     }
 
     /// <summary>
+    /// 处理Greeting弹窗后跳转场景的协程
+    /// </summary>
+    private System.Collections.IEnumerator GreetingAndJumpTo()
+    {
+        // 1. 弹出 Greeting 弹窗
+        if (_purchaseManager != null)
+        {
+            _purchaseManager.OpenGreetingTanChuang(); 
+        }
+
+        // 2. 延时
+        yield return new WaitForSeconds(endSceneDelay);
+
+        // 3. 跳转至 End 场景
+        Debug.Log("正在跳转至 End 场景...");
+        SceneManager.LoadScene("End");
+    }
+
+    /// <summary>
     /// 核心触发函数
-    /// 对应你要求的 Open 函数逻辑
     /// </summary>
     public void Open()
     {
         // 安全检查
         if (_purchaseManager == null) return;
 
-        // 获取 DataManager 的单例实例（因为 PurchaseTanChuang 内部也是这么获取的）
-        var dataManager = DataManager.Instance;
-        
         // 防止重复执行
         if (_hasTriggered) return;
         _hasTriggered = true;
 
-        // 核心逻辑：按照你的条件判断弹窗
-        // 条件：gameT == 1
-        if (dataManager.gameT >= 2)
+        // 获取 DataManager 的单例实例
+        var dataManager = DataManager.Instance;
+
+        if (dataManager != null)
         {
-            switch (dataManager.topUpT)
+            // --- 逻辑分支 A: gameT >= 2 ---
+            if (dataManager.gameT >= 2)
             {
-                case 0:
-                    _purchaseManager.OpenLevelTanChuang();
-                    break;
-                case 1:
-                    _purchaseManager.OpenSkinTanChuang();
-                    break;
-                case 2:
-                    _purchaseManager.OpenMingwenTanChuang();
-                    break;
-                case 3:
-                    _purchaseManager.OpenDiamondTanChuang();
-                    break;
-                case 4:
-                    _purchaseManager.OpenPetTanChuang();
-                    break;
-                default:
-                    // 如果 topUpT 大于4，不弹窗或者你可以定义其他逻辑
-                    Debug.Log("topUpT 超出预设范围，不触发弹窗");
-                    break;
+                switch (dataManager.topUpT)
+                {
+                    case 0: 
+                        _purchaseManager.OpenLevelTanChuang(); 
+                        break;
+                    case 1: 
+                        _purchaseManager.OpenSkinTanChuang(); 
+                        break;
+                    
+                    // 铭文弹窗 (topUpT == 2) -> 触发手机界面
+                    case 2: 
+                        _purchaseManager.OpenMingwenTanChuang();
+                        StartCoroutine(TriggerPhoneInterface());
+                        break;
+
+                    // 宝石弹窗 (topUpT == 3) -> 触发手机界面
+                    case 3: 
+                        _purchaseManager.OpenDiamondTanChuang();
+                        StartCoroutine(TriggerPhoneInterface());
+                        break;
+
+                    // 宠物弹窗 (topUpT == 4) -> 触发手机界面
+                    case 4: 
+                        _purchaseManager.OpenPetTanChuang();
+                        StartCoroutine(TriggerPhoneInterface());
+                        break;
+
+                    // 称号弹窗 (topUpT == 5) -> 触发手机界面
+                    case 5:
+                        _purchaseManager.OpenTitleTanChuang();
+                        StartCoroutine(TriggerPhoneInterface());
+                        break;
+
+                    default: 
+                        Debug.Log("topUpT 超出预设范围"); 
+                        break;
+                }
+            }
+            // --- 逻辑分支 B: gameT == 1 ---
+            else if (dataManager.gameT == 1)
+            {
+                // Greeting弹窗 (topUpT == 6)
+                if (dataManager.topUpT == 6)
+                {
+                    StartCoroutine(GreetingAndJumpTo());
+                }
             }
         }
-        // 如果 gameT 不等于 1，不执行任何操作
+    }
+
+    /// <summary>
+    /// 触发手机界面显示的协程
+    /// 独立出来方便在多个 case 中复用
+    /// </summary>
+    private System.Collections.IEnumerator TriggerPhoneInterface()
+    {
+        // 安全检查
+        if (uiZoomManager == null)
+        {
+            Debug.LogError("UIZoomToRight 引用为空！");
+            yield break;
+        }
+
+        // 延时一段时间后触发手机界面弹出
+        yield return new WaitForSeconds(phoneDelay);
+        
+        // 触发UIZoomToRight脚本中的函数
+        uiZoomManager.TriggerZoomAndShowPhone();
     }
 }

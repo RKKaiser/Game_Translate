@@ -4937,7 +4937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &843410934
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7962,7 +7962,7 @@ MonoBehaviour:
   topUpT: 0
   VIPRank: 0
   rank: 0
-  Phone: 0
+  phone: 0
 --- !u!4 &1510052511
 Transform:
   m_ObjectHideFlags: 0
@@ -9225,6 +9225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01774e96d1c44dd45848e3b1cc8dcb23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  phoneDelay: 1
+  endSceneDelay: 3
+  uiZoomManager: {fileID: 0}
 --- !u!1 &1770042241
 GameObject:
   m_ObjectHideFlags: 0
@@ -10240,7 +10243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1972655899
 RectTransform:
   m_ObjectHideFlags: 0

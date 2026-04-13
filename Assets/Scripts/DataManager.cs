@@ -11,8 +11,8 @@ public class DataManager : MonoBehaviour
     public int VIPRank; 
     public int rank; 
 
-    // 新增：Phone 变量
-    public int Phone;
+    // 新增：phone 变量
+    public int phone = 0;
 
     // 新增：用于标记充值状态，判断是否是充值后的第一局
     private bool hasJustTopUp = false;
@@ -67,7 +67,7 @@ public class DataManager : MonoBehaviour
 
         if (topUpT >= 2 && gameT == 1)
         {
-            Phone += 1;
+            phone += 1;
         }
     }
 }
