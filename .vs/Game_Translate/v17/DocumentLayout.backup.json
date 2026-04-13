@@ -3,7 +3,23 @@
   "WorkspaceRootPath": "E:\\UnityProject\\Game_Translate\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|e:\\unityproject\\game_translate\\assets\\scripts\\game\\purchasetanchuang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|e:\\unityproject\\game_translate\\assets\\scripts\\phone\\stagebtn_singleimagefadeswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\phone\\stagebtn_singleimagefadeswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Phone\\StageBtn_SingleImageSwitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Phone\\StageBtn_SingleImageSwitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Phone\\BtnSingleGroupImageSwitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Phone\\BtnSingleGroupImageSwitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Phone\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Phone\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|E:\\UnityProject\\Game_Translate\\assets\\scripts\\game\\purchasetanchuang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0CD6A6CD-41B7-FAE8-CE11-7A8DBC9C07BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\game\\purchasetanchuang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -66,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,7 +98,53 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StageBtn_SingleImageFadeSwitch.cs",
+              "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Phone\\StageBtn_SingleImageFadeSwitch.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Phone\\StageBtn_SingleImageFadeSwitch.cs",
+              "ToolTip": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Phone\\StageBtn_SingleImageFadeSwitch.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Phone\\StageBtn_SingleImageFadeSwitch.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAgwGEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T01:35:11.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "StageBtn_SingleImageSwitch.cs",
+              "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Phone\\StageBtn_SingleImageSwitch.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Phone\\StageBtn_SingleImageSwitch.cs",
+              "ToolTip": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Phone\\StageBtn_SingleImageSwitch.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Phone\\StageBtn_SingleImageSwitch.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T01:19:33.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BtnSingleGroupImageSwitch.cs",
+              "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Phone\\BtnSingleGroupImageSwitch.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Phone\\BtnSingleGroupImageSwitch.cs",
+              "ToolTip": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Phone\\BtnSingleGroupImageSwitch.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Phone\\BtnSingleGroupImageSwitch.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T01:14:45.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NewBehaviourScript.cs",
+              "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Phone\\NewBehaviourScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Phone\\NewBehaviourScript.cs",
+              "ToolTip": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Phone\\NewBehaviourScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Phone\\NewBehaviourScript.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T01:07:28.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "DataManager.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\DataManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DataManager.cs",
@@ -94,20 +156,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "PurchaseTanChuang.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\PurchaseTanChuang.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Game\\PurchaseTanChuang.cs",
               "ToolTip": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\PurchaseTanChuang.cs",
               "RelativeToolTip": "Assets\\Scripts\\Game\\PurchaseTanChuang.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowJIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAQwHwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T08:26:07.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T08:26:07.038Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "LockPanel.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\LockPanel.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LockPanel.cs",
@@ -119,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "SettingPanel.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\SettingPanel.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SettingPanel.cs",
@@ -131,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "OpenSetting.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\OpenSetting.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\OpenSetting.cs",
@@ -142,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "UIZoomToRight.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\UIZoomToRight.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Game\\UIZoomToRight.cs",
@@ -154,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "NewBehaviourScript.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\Game\\NewBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Game\\NewBehaviourScript.cs",
@@ -165,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "ImageScaleCenter_AutoHide.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\ImageScaleCenter_AutoHide.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ImageScaleCenter_AutoHide.cs",
@@ -177,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "UIController_GroupImage.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\UIController_GroupImage.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIController_GroupImage.cs",
@@ -189,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "UIController.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\UIController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIController.cs",
@@ -200,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "NewBehaviourScript.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\NewBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NewBehaviourScript.cs",
@@ -211,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "ImageScaleByCenter.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\ImageScaleByCenter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ImageScaleByCenter.cs",
@@ -222,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "ImageLoopScroll.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\ImageLoopScroll.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ImageLoopScroll.cs",
@@ -234,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "GameStart.cs",
               "DocumentMoniker": "E:\\UnityProject\\Game_Translate\\Assets\\Scripts\\GameStart.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameStart.cs",
