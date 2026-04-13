@@ -19,6 +19,8 @@ public class FightStart : MonoBehaviour
             Debug.LogError("DataManager 实例未找到！");
         }
 
+        SoundManager.Instance.PlayButtonClickSound();
+
         // 2. 然后加载 Fight 场景
         SceneManager.LoadScene("Fight"); 
     } 

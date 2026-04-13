@@ -10,10 +10,12 @@ public class SettingPanel : MonoBehaviour
     public GameObject LockPanel;
     public void OpenSettingPanel()
     {
+        SoundManager.Instance.PlayButtonClickSound();
         settingPanel.SetActive(true);
     }
     public void OpenLockPanel()
     {
+        SoundManager.Instance.PlayButtonClickSound();
         LockPanel.SetActive(true);
     }
     public void CloseSettingPanel()
@@ -22,11 +24,11 @@ public class SettingPanel : MonoBehaviour
     }
     public void QuitGame()
     {
-        // ÔÚ Unity ±à¼­Æ÷ÖÐÍ£Ö¹²¥·ÅÄ£Ê½
+        // ï¿½ï¿½ Unity ï¿½à¼­ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½ï¿½ï¿½ï¿½Ä£Ê½
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-            // ÔÚ¹¹½¨µÄÓ¦ÓÃ³ÌÐòÖÐÍË³ö
+            // ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½
             Application.Quit();
 #endif
     }

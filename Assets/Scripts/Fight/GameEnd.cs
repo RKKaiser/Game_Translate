@@ -7,6 +7,7 @@ public class GameEnd : MonoBehaviour
 {
  public void EndGame()
     {
+        SoundManager.Instance.PlayButtonClickSound();
         DataManager.Instance.OnGameEnd();
         SceneManager.LoadScene("Game");
     } 

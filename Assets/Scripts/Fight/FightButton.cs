@@ -34,6 +34,8 @@ public class FightButton : MonoBehaviour
 
     private void OnChoiceButtonClick(int choice)
     {
+
+        SoundManager.Instance.PlayButtonClickSound();
         currentPlayerChoice = choice;
         SetButtonsInteractable(false); // 禁用按钮防止连点
 
