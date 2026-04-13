@@ -34,24 +34,24 @@ public class UIImageManager: MonoBehaviour
 
         // 1. 铭文显示控制 (gameT >=1 && topUpT == 2)
         // 假设 mingwenParent 是 Mingwen_1，我们需要控制它和它的兄弟节点
-        HandleGroupDisplay(mingwenParent, _dataManager.gameT >= 1 && _dataManager.topUpT == 2);
+        HandleGroupDisplay(mingwenParent,_dataManager.topUpT == 3);
 
         // 2. 宝石显示控制 (gameT >=1 && topUpT == 3)
-        HandleGroupDisplay(diamondParent, _dataManager.gameT >= 1 && _dataManager.topUpT == 3);
+        HandleGroupDisplay(diamondParent,_dataManager.topUpT == 4);
 
         // 3. 宠物显示控制 (gameT >=1 && topUpT == 3)
         if (petObject != null)
         {
-            petObject.SetActive(_dataManager.gameT >= 1 && _dataManager.topUpT == 4);
+            petObject.SetActive(_dataManager.topUpT == 5);
         }
 
         // 4. 皮肤图片替换 (gameT >=1 && topUpT == 1)
-        if (_dataManager.gameT >= 1 && _dataManager.topUpT == 1)
+        if (_dataManager.topUpT == 2)
         {
             ReplaceImages(skinReplacements);
         }
         // 5. 等级图片替换 (gameT >=1 && topUpT == 0)
-        else if (_dataManager.gameT >= 1 && _dataManager.topUpT == 0)
+        else if (_dataManager.topUpT == 1)
         {
             ReplaceImages(levelReplacements);
         }

@@ -67,7 +67,7 @@ public class AutoPopupTrigger : MonoBehaviour
 
         // 核心逻辑：按照你的条件判断弹窗
         // 条件：gameT == 1
-        if (dataManager.gameT == 1)
+        if (dataManager.gameT >= 2)
         {
             switch (dataManager.topUpT)
             {
