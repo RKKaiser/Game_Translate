@@ -4732,7 +4732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &790530248
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6012,6 +6012,7 @@ MonoBehaviour:
   mingwenParent: {fileID: 1972655898}
   diamondParent: {fileID: 843410933}
   petObject: {fileID: 1800334293}
+  refreshIntervalFrames: 10
 --- !u!1 &1125103780
 GameObject:
   m_ObjectHideFlags: 0
@@ -9582,7 +9583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1800334294
 RectTransform:
   m_ObjectHideFlags: 0

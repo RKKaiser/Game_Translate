@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 /// <summary>
 /// 用于管理充值轮次中 UI 图片显示、隐藏及替换的管理器
+/// 版本：简化父物体控制版
 /// </summary>
-public class UIImageManager: MonoBehaviour
+public class UIImageManager : MonoBehaviour
 {
     private DataManager _dataManager;
 
@@ -14,79 +15,74 @@ public class UIImageManager: MonoBehaviour
     public List<ImageReplacement> skinReplacements = new List<ImageReplacement>();
     public List<ImageReplacement> levelReplacements = new List<ImageReplacement>();
 
-    [Header("UI 物体引用 (自动查找子物体)")]
-    public GameObject mingwenParent; // 指向 Mingwen_1 物体
-    public GameObject diamondParent; // 指向 Diamond_1 物体
-    public GameObject petObject;     // 指向 Pet_Image 物体
+    [Header("UI 物体引用 (直接控制父物体)")]
+    public GameObject mingwenParent; // 铭文父物体
+    public GameObject diamondParent; // 宝石父物体
+    public GameObject petObject;     // 宠物物体
+
+    [Header("性能优化设置")]
+    [Tooltip("每隔多少帧刷新一次 UI (例如: 10帧 ≈ 0.3秒 @ 30FPS)")]
+    public int refreshIntervalFrames = 10; 
+
+    private int _frameCounter = 0;
 
     private void Awake()
     {
         _dataManager = DataManager.Instance;
     }
 
-    /// <summary>
-    /// 刷新 UI 状态
-    /// 对应你要求的 Open 函数逻辑
-    /// </summary>
-    public void Refresh()
+    private void Update()
     {
         if (_dataManager == null) return;
 
-        // 1. 铭文显示控制 (gameT >=1 && topUpT == 2)
-        // 假设 mingwenParent 是 Mingwen_1，我们需要控制它和它的兄弟节点
-        HandleGroupDisplay(mingwenParent,_dataManager.topUpT == 3);
-
-        // 2. 宝石显示控制 (gameT >=1 && topUpT == 3)
-        HandleGroupDisplay(diamondParent,_dataManager.topUpT == 4);
-
-        // 3. 宠物显示控制 (gameT >=1 && topUpT == 3)
-        if (petObject != null)
+        // 帧计数器逻辑
+        _frameCounter++;
+        if (_frameCounter >= refreshIntervalFrames)
         {
-            petObject.SetActive(_dataManager.topUpT == 5);
+            _frameCounter = 0; // 重置计数器
+            Refresh();         // 执行刷新
         }
-
-        // 4. 皮肤图片替换 (gameT >=1 && topUpT == 1)
-        if (_dataManager.topUpT == 2)
-        {
-            ReplaceImages(skinReplacements);
-        }
-        // 5. 等级图片替换 (gameT >=1 && topUpT == 0)
-        else if (_dataManager.topUpT == 1)
-        {
-            ReplaceImages(levelReplacements);
-        }
-        // 6. 默认情况：如果条件不满足，可以恢复默认或隐藏（根据需求，这里选择不处理，保持原样或由其他逻辑控制）
-        // 如果需要恢复默认图片，可以在这里添加逻辑
     }
 
     /// <summary>
-    /// 通用方法：处理一组带有 _1, _2, _3 后缀的物体的显示/隐藏
+    /// 刷新 UI 状态
     /// </summary>
-    /// <param name="sampleObject">传入其中一个物体（如 _1），用于查找同级的其他物体</param>
-    /// <param name="active">是否激活</param>
-    private void HandleGroupDisplay(GameObject sampleObject, bool active)
+    public void Refresh()
     {
-        if (sampleObject == null) return;
-
-        Transform parent = sampleObject.transform.parent;
-        if (parent == null) return;
-
-        // 查找并控制 _1, _2, _3
-        for (int i = 1; i <= 3; i++)
+        if (_dataManager.topUpT >= 1)
         {
-            string objName = sampleObject.name.Replace("_1", "") + "_" + i;
-            Transform child = parent.Find(objName);
-            if (child != null)
-            {
-                child.gameObject.SetActive(active);
-            }
+            ReplaceImages(levelReplacements);
         }
+
+        if (_dataManager.topUpT >= 2)
+        {
+            ReplaceImages(skinReplacements);
+        }
+        // 铭文显示控制 (gameT >=1 && topUpT == 2)
+        // 直接控制父物体显隐
+        if (mingwenParent != null)
+        {
+            mingwenParent.SetActive(_dataManager.topUpT >= 3);
+        }
+
+        // 宝石显示控制 (gameT >=1 && topUpT == 3)
+        // 直接控制父物体显隐
+        if (diamondParent != null)
+        {
+            diamondParent.SetActive(_dataManager.topUpT >= 4);
+        }
+
+        // 宠物显示控制 (gameT >=1 && topUpT == 3)
+        if (petObject != null)
+        {
+            petObject.SetActive(_dataManager.topUpT >= 5);
+        }
+
     }
 
     /// <summary>
     /// 通用方法：替换图片素材
     /// </summary>
-    /// <param name="replacements">替换列表</param>
     private void ReplaceImages(List<ImageReplacement> replacements)
     {
         foreach (var item in replacements)
@@ -97,10 +93,6 @@ public class UIImageManager: MonoBehaviour
                 if (img != null)
                 {
                     img.sprite = item.newSprite;
-                }
-                else
-                {
-                    Debug.LogWarning($"物体 {item.targetObject.name} 上没有 Image 组件");
                 }
             }
         }
