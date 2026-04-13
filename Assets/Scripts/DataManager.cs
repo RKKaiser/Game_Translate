@@ -10,8 +10,9 @@ public class DataManager : MonoBehaviour
     public int topUpT; // 充值次数
     public int VIPRank; 
     public int rank; 
-    public int pet;
-    public int inscription;
+
+    // 新增：Phone 变量
+    public int Phone;
 
     // 新增：用于标记充值状态，判断是否是充值后的第一局
     private bool hasJustTopUp = false;
@@ -42,7 +43,7 @@ public class DataManager : MonoBehaviour
         
     }
 
-    // 新增方法：充值逻辑
+    // 充值逻辑
     public void OnPlayerTopUp()
     {
         topUpT += 1;
@@ -54,7 +55,7 @@ public class DataManager : MonoBehaviour
         hasJustTopUp = true;
     }
 
-    // 新增方法：游戏结算逻辑（需在每局游戏结束时调用）
+    // 游戏结算逻辑（需在从Fight场景切回Game场景时调用）
     public void OnGameEnd()
     {
         // 如果是充值后的第一局游戏
@@ -62,6 +63,11 @@ public class DataManager : MonoBehaviour
         {
             rank += 1; // 段位+1
             hasJustTopUp = false; // 重置标记
+        }
+
+        if (topUpT >= 2 && gameT == 1)
+        {
+            Phone += 1;
         }
     }
 }

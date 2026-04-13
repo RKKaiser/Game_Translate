@@ -42,7 +42,7 @@ public class UIImageManager: MonoBehaviour
         // 3. 宠物显示控制 (gameT >=1 && topUpT == 3)
         if (petObject != null)
         {
-            petObject.SetActive(_dataManager.gameT >= 1 && _dataManager.topUpT == 3);
+            petObject.SetActive(_dataManager.gameT >= 1 && _dataManager.topUpT == 4);
         }
 
         // 4. 皮肤图片替换 (gameT >=1 && topUpT == 1)

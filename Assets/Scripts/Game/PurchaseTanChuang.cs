@@ -24,7 +24,7 @@ public class PurchaseTanChuang : MonoBehaviour
     }
 
     // ===================================================================================
-    // ´ò¿ª¸÷¸öµ¯´°
+    // ï¿½ò¿ª¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     // ===================================================================================
     public void OpenLevelTanChuang()
     {
@@ -94,7 +94,7 @@ public class PurchaseTanChuang : MonoBehaviour
     }
 
     // ===================================================================================
-    // ¹Ø±Õ¸÷¸öµ¯´°
+    // ï¿½Ø±Õ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     // ===================================================================================
     public void CloseLevelTanChuang() => Level_tanChuang.SetActive(false);
     public void CloseSkinTanChuang() => Skin_tanChuang.SetActive(false);
@@ -126,59 +126,59 @@ public class PurchaseTanChuang : MonoBehaviour
     }
 
     // ===================================================================================
-    // ¸÷¸öµ¯´°µÄ¹ºÂò°´Å¥£¨×Ô¶¯ÐÞ¸ÄÊýÖµ + ¹Ø±Õµ¯´°£©
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½Öµ + ï¿½Ø±Õµï¿½ï¿½ï¿½ï¿½ï¿½
     // ===================================================================================
     public void Buy_Level()
     {
         _dataManager.gameT =0;
-        _dataManager.topUpT += 1;
+        _dataManager.OnPlayerTopUp();
         CloseLevelTanChuang();
     }
 
     public void Buy_Skin()
     {
         _dataManager.gameT =0;
-        _dataManager.topUpT += 1;
+        _dataManager.OnPlayerTopUp();
         CloseSkinTanChuang();
     }
 
     public void Buy_Pet()
     {
         _dataManager.gameT =0;
-        _dataManager.topUpT += 1;
+        _dataManager.OnPlayerTopUp();
         ClosePetTanChuang();
     }
 
     public void Buy_Title()
     {
         _dataManager.gameT =0;
-        _dataManager.topUpT += 1;
+        _dataManager.OnPlayerTopUp();
         CloseTitleTanChuang();
     }
 
     public void Buy_Mingwen()
     {
         _dataManager.gameT =0;
-        _dataManager.topUpT += 1;
+        _dataManager.OnPlayerTopUp();
         CloseMingwenTanChuang();
     }
 
     public void Buy_MainPage()
     {
         _dataManager.gameT =0;
-        _dataManager.topUpT += 1;
+       _dataManager.OnPlayerTopUp();
         CloseMainPageTanChuang();
     }
 
     public void Buy_Diamond()
     {
         _dataManager.gameT =0;
-        _dataManager.topUpT += 1;
+        _dataManager.OnPlayerTopUp();
         CloseDiamondTanChuang();
     }
     public void Buy_Greeting()
     {
-        //ÓÎÏ·½áÊøÂß¼­´¦Àí
+        //ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½ï¿½ï¿½ï¿½ï¿½
         CloseDiamondTanChuang();
     }
 }
