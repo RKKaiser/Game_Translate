@@ -8,5 +8,6 @@ public class FightStart : MonoBehaviour
     public void StartFight()
     {
         SceneManager.LoadScene("Fight");
+
     }
 }
